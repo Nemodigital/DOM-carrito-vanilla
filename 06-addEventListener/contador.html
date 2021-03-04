@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento click</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container py-5 bg-warning text-center">
+        <h1>Contador</h1>
+        <button class="btn btn-info">
+            Aumentar
+        </button>
+        <button class="btn btn-danger">
+            Disminuir
+        </button>
+        <h4 class="my-5">Contador: <span id="span">0</span></h4>
+    </div>
+
+    <script>
+        // capturamos los botones
+        const btnAumentar = document.querySelector('.btn-info');
+        const span = document.getElementById('span');
+        let contador = 0;
+
+        const btnDisminuir = document.querySelector('.btn-danger');
+
+        // escuchamos el click para aumentar
+        btnAumentar.addEventListener('click', () => {
+            console.log('me diste click a aumentar');
+            contador++;
+            span.textContent = contador;
+        })
+
+        // escuchamos el click para disminuir
+        btnDisminuir.addEventListener('click', () => {
+            console.log(' me diste click en el botón disminuir');
+            contador--;
+            span.textContent = contador;
+        })
+
+
+    </script>
+</body>
+</html>
